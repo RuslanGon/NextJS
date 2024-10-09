@@ -25,11 +25,11 @@ const Post = async ({ params: { id } }) => {
 };
 
 export async function generateStaticParams() {
-    // Здесь мы определяем статические параметры для генерации страниц постов
-    const postIds = ['1', '2', '3']; // Замените на реальные ID постов, которые вы хотите использовать
+    
+    const postIds = ['1', '2', '3']; 
 
     return postIds.map(id => ({
-        id: id, // Используем то же имя параметра, что и в маршруте
+        id: id, 
     }));
 }
 
