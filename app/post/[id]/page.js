@@ -1,9 +1,12 @@
 import Details from '@/app/components/Details.js'
 
-export const metadata = {
-    title: "Post 1",
-
-  };
+export async function generateMetadata({ params }) {
+    const post = await fetchPostById(params.id);
+    return {
+      title: post.title,
+      description: post.body,
+    };
+  }
 
 async function fetchPostById (id) {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts/' + id)
