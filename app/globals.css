@@ -25,3 +25,11 @@ a:hover {
 .container {
   padding-left: 50px;
 }
+
+.post {
+  width: 500px;
+  padding: 20px;
+  border: 2px solid red;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
